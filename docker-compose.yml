@@ -1,0 +1,29 @@
+services:
+  mc:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      MOTD: "§lSage MC Server§r / §9hilsinger.org§r\n§aIt works!"
+      DIFFICULTY: "hard"
+      ENFORCE_WHITELIST: "true"
+      EXISTING_WHITELIST_FILE: "SYNCHRONIZE"
+      EXISTING_OPS_FILE: "SYNCHRONIZE"
+      WHITELIST: |
+        carpss
+        AfroFantom
+        joemg_69
+        noondays
+        skullisonfuego
+        Skullsmasher
+        Shadowstar1000
+      OPS: "carpss"
+      MAX_WORLD_SIZE: "100"
+      SEED: "-4361528937055201680"
+      SERVER_NAME: "Sage Server"
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
