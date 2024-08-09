@@ -7,7 +7,7 @@ services:
       - "25565:25565"
     environment:
       EULA: "TRUE"
-      MOTD: "§lSage MC Server§r / §9hilsinger.org§r\n§aIt works!"
+      MOTD: "§lSage MC Server§r / §9website.org§r\n§aIt works!"
       DIFFICULTY: "hard"
       ENFORCE_WHITELIST: "true"
       EXISTING_WHITELIST_FILE: "SYNCHRONIZE"
